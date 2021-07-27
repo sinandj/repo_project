@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}<!--Herencia de layout.html-->
+
+{% block title %} Confirmar {% endblock %}
+
+{% block content %}
+
+<!--Formulario de agendamiento-->
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h3>Agenda tu cita</h3>
+        <form action="/confirm" method="POST">
+            <div class="row">
+                <div class="col-xl-6">
+                    <label>Fecha:</label>
+                    <input type="datetime" id="datepicker" placeholder="Selecciona una fecha" name="fecha_cita">
+                </div>
+                <div class="col-xl-6">
+                    <label>Hora:</label>
+                    <select type="time" class="form-select wide" id="default-select" class="" name="hora_cita">
+                        <option data-display="Hora">-- : --</option>
+                        <option value="1">7:00 a.m.</option>
+                        <option value="2">7:20 a.m.</option>
+                        <option value="3">7:40 a.m.</option>
+                        <option value="4">8:00 a.m.</option>
+                        <option value="5">8:20 a.m.</option>
+                        <option value="6">8:40 a.m.</option>
+                        <option value="7">9:00 a.m.</option>
+                        <option value="8">9:20 a.m.</option>
+                        <option value="9">9:40 a.m.</option>
+                        <option value="10">10:00 a.m.</option>
+                        <option value="11">10:20 a.m.</option>
+                        <option value="12">10:40 a.m.</option>
+                        <option value="13">11:00 a.m.</option>
+                        <option value="14">11:20 a.m.</option>
+                        <option value="15">11:40 a.m.</option>
+                        <option value="16">12:00 a.m.</option>
+                        <option value="17">12:20 a.m.</option>
+                        <option value="18">12:40 a.m.</option>
+                        <option value="19">01:00 p.m.</option>
+                        <option value="20">01:20 p.m.</option>
+                        <option value="21">01:40 p.m.</option>
+                        <option value="22">02:00 p.m.</option>
+                        <option value="23">02:20 p.m.</option>
+                        <option value="24">02:40 p.m.</option>
+                        <option value="25">03:00 p.m.</option>
+                        <option value="26">03:20 p.m.</option>
+                        <option value="27">03:40 p.m.</option>
+                        <option value="28">04:00 p.m.</option>
+                        <option value="29">04:20 p.m.</option>
+                        <option value="30">04:40 p.m.</option>
+                        <option value="31">05:00 p.m.</option>
+                        <option value="32">05:20 p.m.</option>
+                        <option value="33">05:40 p.m.</option>
+                        <option value="34">06:00 p.m.</option>
+                        <option value="35">06:20 p.m.</option>
+                        <option value="36">06:40 p.m.</option>
+                    </select>
+                </div>
+                <div class="col-xl-6">
+                    <label>Área:</label>
+                    <select type="text" class="form-select wide" id="default-select" class="" name="area">
+                        <option data-display="Área de salud">Department</option>
+                        <option value="1">Medicina General</option>
+                        <option value="2">Odontología</option>
+                        <option value="3">Salud Visual</option>
+                    </select>
+                </div>
+                <div class="col-xl-6">
+                    <label>Doctor:</label>
+                    <select type="text" class="form-select wide" id="default-select" class="" name="doctor">
+                        <option data-display="Doctores">Doctores</option>
+                        <option value="1">Mirazul Alom</option>
+                        <option value="2">Monzul Alom</option>
+                        <option value="3">Azizul Isalm</option>
+                    </select>
+                </div>
+                <div class="col-md-6"><br>
+                    <label>Nombre:</label>
+                    <input type="text" class="form-select wide" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="col-md-6"><br>
+                    <label>Apellido:</label>
+                    <input type="text" class="form-select wide" placeholder="Apellido" name="apellido">
+                </div>
+                <div class="col-xl-6"><br>
+                    <label>Celular:</label>
+                    <input type="text" class="form-select wide" placeholder="Celular" name="celular">
+                </div>
+                <div class="col-xl-6"><br>
+                    <label>Email:</label>
+                    <input type="email" class="form-select wide" placeholder="Email" name="email">
+                </div>
+                <div class="col-xl-12"><br>
+                    <button type="submit" class="btn btn-primary" name="confirmar">Confirmar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+<!--class="boxed-btn3"-->
